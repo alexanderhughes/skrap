@@ -1,13 +1,35 @@
 <% provide(:title, "Skrap.io") %>
 <h1>Sign up!</h1>
-<div>Skrap.io creates efficiencies for both businesses and waste haulers in the New York City area. Skrap may be able to get you better rates and services for your waste management needs. Sign-up below to receive more information.<div>
+<h2>Skrap.io creates efficiencies for both businesses and waste haulers in the New York City area.</h2>
+<h2>Skrap may be able to get you better rates and find the best services available for your waste management needs. Sign-up below to receive more information.</h2>
 
-<div>
+<div class="form">
   <%= form_for @client do |f| %>
+	<%= f.text_field :business_name, class: "form-control", placeholder: "Company Name" %>
+	<br>
+	<%= f.text_field :business_street_address, class: "form-control", placeholder: "Address" %>
+	<br>
+	<%= f.text_field :business_zip, class: "form-control", placeholder: "Zip" %>
+	<br>
+	<%= f.text_field :types_of_waste, class: "form-control", placeholder: "What types of waste do you predominantly dispose of?" %>
+	<br>
+	<%= f.text_field :pickup_days, class: "form-control", placeholder: "For which days of the week do you need pickups?" %>
+	<br>
+	<%= f.text_field :compost, class: "form-control", placeholder: "Are you looking for composting service (y/n)?" %>
+	<br>
+	<%= f.text_field :recycling, class: "form-control", placeholder: "Are you looking for recycling service (y/n)?" %>
+	<br>
+	<%= f.text_field :contact_first_name, class: "form-control", placeholder: "First Name" %>
+	<br>
+	<%= f.text_field :contact_last_name, class: "form-control", placeholder: "Last Name" %>
+	<br>
+	<%= f.text_field :contact_phone, class: "form-control", placeholder: "Phone Number (no dashes, no parentheses)" %>
+	<br>
+	<%= f.text_field :contact_role, class: "form-control", placeholder: "Title (owner, manager, etc.)" %>
+	<br>
 	<%= f.text_field :email_address, class: "form-control", placeholder: "Email address" %>
 	<br>
-	<%= f.submit "Submit", class: "btn btn-default"%>
+	<%= f.submit "Sign me up!", class: "btn btn-lg"%>
 	<% end %>
 </div>
-
 </div>
